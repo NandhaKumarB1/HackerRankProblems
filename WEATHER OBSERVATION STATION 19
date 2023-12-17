@@ -1,0 +1,12 @@
+MYSQL CODE :-
+
+SELECT 
+    ROUND(
+        POWER(
+        (
+            POWER((MAX(lat_n) - MIN(lat_n)), 2) 
+            + 
+            POWER((MAX(long_w) - MIN(long_w)), 2) 
+        ), 0.5)
+    , 4) AS md 
+FROM station;
