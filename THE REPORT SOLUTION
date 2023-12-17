@@ -1,0 +1,6 @@
+MYSQL CODE :
+
+SELECT CASE WHEN g.grade < 8 THEN NULL 
+        ELSE s.name 
+        END as name, g.grade, s.marks FROM students AS s INNER JOIN grades AS g
+        ON s.marks BETWEEN g.min_mark AND g.max_mark order by g.grade desc, s.name;
